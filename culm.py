@@ -83,16 +83,16 @@ def home():
 
 # function for object detection in images
 def imageod():
-    choice  = st.selectbox("Select Image",("Sample Image 1","Sample Image 2","Sample Image 3","Upload Image"))
-    if choice == "Upload Image":
+    choice  = st.selectbox("Select Image",("Sample Image 1","Sample Image 2","Sample Image 3","Upload an Image"))
+    if choice == "Upload an Image":
         # image uploader
         file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
     elif choice == "Sample Image 1":
-        file = ""
+        file = "./pictures/OBSample1.jpeg"
     elif choice == "Sample Image 2":
-        file = ""
+        file = "./pictures/OBSample2.jpeg"
     elif choice == "Sample Image 3":
-        file = ""
+        file = "./pictures/OBSample3.jpeg"
     # starting process once file is uploaded or selected
     if file != None:
         img1 = Image.open(file)

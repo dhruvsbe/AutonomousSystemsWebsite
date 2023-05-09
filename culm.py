@@ -380,7 +380,7 @@ def trafficSignClassification():
         pred = np.argmax(predict_input,axis=1)
         for x in pred:
             sign = classes[x + 1]
-            st.header(f"Model Prediction: '{sign}' sign")
+            st.header(f"Sign Prediction by Model: {sign}")
 
 # Page 4
 def laneDetection():

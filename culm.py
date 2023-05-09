@@ -354,7 +354,6 @@ def laneDetection():
         file = cv2.imread(file1)
         file = np.copy(file)
         # displaying original image
-        st.divider()
         st.image(img, caption = "Original Image")
         st.divider()
         canny_image = canny(file)

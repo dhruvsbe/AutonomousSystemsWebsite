@@ -10,7 +10,7 @@ from ultralytics import YOLO
 import urllib
 import time
 from tensorflow import keras
-model = keras.models.load_model('/Users/dhruvbejugam/Desktop/AutonomousSystemsWebsite/TrafficSignDetection/trafficSignClassifier.h5')
+model = keras.models.load_model('./otherFiles/trafficSignClassifier.h5')
 
 #with open('style.css') as f:
 #    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
@@ -20,12 +20,12 @@ model = keras.models.load_model('/Users/dhruvbejugam/Desktop/AutonomousSystemsWe
 ## add heic compatibity
 
 # images used
-banner = Image.open("/Users/dhruvbejugam/Desktop/AutonomousSystemsWebsite/pictures/websiteBanner.png")
-autopilotCameraPerception = Image.open("/Users/dhruvbejugam/Desktop/AutonomousSystemsWebsite/pictures/AutopilotCameraFeed.webp")
-ethicalIssue = Image.open("/Users/dhruvbejugam/Desktop/AutonomousSystemsWebsite/pictures/ethicalIssue.png")
-objectDetectionClassification = Image.open("/Users/dhruvbejugam/Desktop/AutonomousSystemsWebsite/pictures/objectDetection.png")
-signClassification = Image.open("/Users/dhruvbejugam/Desktop/AutonomousSystemsWebsite/pictures/signClassification.png")
-laneDetectionI = Image.open("/Users/dhruvbejugam/Desktop/AutonomousSystemsWebsite/pictures/laneDetection.png")
+banner = Image.open("./pictures/websiteBanner.png")
+autopilotCameraPerception = Image.open("./AutopilotCameraFeed.webp")
+ethicalIssue = Image.open("./pictures/ethicalIssue.png")
+objectDetectionClassification = Image.open("./pictures/objectDetection.png")
+signClassification = Image.open("./pictures/signClassification.png")
+laneDetectionI = Image.open("./pictures/laneDetection.png")
 
 # image and menu bar at the top of the site
 st.image(banner)
@@ -101,13 +101,13 @@ def imageod():
         # bar to set confidence threshold
         confThreshold =st.sidebar.slider('Confidence Threshold:', 0, 100, 50)
         whT = 320
-        classesFile = "/Users/dhruvbejugam/Desktop/AutonomousSystemsWebsite/coconames.txt"
+        classesFile = "./otherFiles/coconames.txt"
         f = open(classesFile, "r")
         classes = []
         for line in f.readlines():
             line = line.replace("\n", "")
             classes.append(line)
-        net = cv2.dnn.readNetFromDarknet('/Users/dhruvbejugam/Desktop/AutonomousSystemsWebsite/yolov3.cfg', '/Users/dhruvbejugam/Desktop/AutonomousSystemsWebsite/yolov3.weights')
+        net = cv2.dnn.readNetFromDarknet('./otherFiles/yolov3.cfg', './otherFiles/yolov3.weights')
         net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
         net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
 
@@ -172,7 +172,7 @@ def videood():
     IOU_THRESHOLD = 0.5
     font_scale = 1
     thickness = 1
-    classesFile = "/Users/dhruvbejugam/Desktop/AutonomousSystemsWebsite/coconames.txt"
+    classesFile = "./otherFiles/coconames.txt"
     f = open(classesFile, "r")
     classes = []
     for line in f.readlines():
@@ -180,7 +180,7 @@ def videood():
         classes.append(line)
     colors = np.random.randint(0, 255, size=(len(classes), 3), dtype="uint8")
 
-    net = cv2.dnn.readNetFromDarknet('/Users/dhruvbejugam/Desktop/AutonomousSystemsWebsite/yolov3.cfg', '/Users/dhruvbejugam/Desktop/AutonomousSystemsWebsite/yolov3.weights')
+    net = cv2.dnn.readNetFromDarknet('./otherFiles/yolov3.cfg', './otherFiles/yolov3.weights')
 
     ln = net.getLayerNames()
     ln = [ln[i - 1] for i in net.getUnconnectedOutLayers()]

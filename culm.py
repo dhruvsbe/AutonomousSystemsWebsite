@@ -156,11 +156,6 @@ def imageod():
         findObjects(outputs,img2)
     
         st.image(img2, caption='Processed Image.')
-        
-        # cv2.waitKey(0)
-        
-        cv2.destroyAllWindows()
-
 
 # Object Detection in Videos
 def videood():

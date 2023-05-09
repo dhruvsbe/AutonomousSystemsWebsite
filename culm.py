@@ -341,11 +341,21 @@ def laneDetection():
     # section 2: system demo
     st.divider()
     st.header("System Demo:")
-    file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
+    choice  = st.selectbox("Select Image",("Sample Image 1","Sample Image 2","Sample Image 3","Sample Image 4","Sample Image 5"))
+    if choice == "Sample Image 1":
+        file1 = "./pictures/LDSample1.png"
+    elif choice == "Sample Image 2":
+        file1 = "./pictures/LDSample2.png"
+    elif choice == "Sample Image 3":
+        file1 = "./pictures/LDSample3.png"
+    elif choice == "Sample Image 4":
+        file1 = "./pictures/LDSample4.png"
+    elif choice == "Sample Image 5":
+        file1 = "./pictures/LDSample5.png"
     # starting process once file is uploaded
-    if file != None:
-        img = file
-        #file = cv2.imread('/Users/dhruvbejugam/Desktop/AutonomousSystemsWebsite/laneDetection/' + file.name)
+    if file1 != None:
+        img = Image.open(file1)
+        file = cv2.imread(file1)
         file = np.copy(file)
         # displaying original image
         st.divider()

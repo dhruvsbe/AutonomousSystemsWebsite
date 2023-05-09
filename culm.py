@@ -343,11 +343,11 @@ def laneDetection():
     st.header("System Demo:")
     choice  = st.selectbox("Select Image",("Sample Image 1","Sample Image 2","Sample Image 3"))
     if choice == "Sample Image 1":
-        file1 = "./pictures/LDSample1.png"
+        file1 = "./pictures/LDSample1.jpeg"
     elif choice == "Sample Image 2":
-        file1 = "./pictures/LDSample2.png"
+        file1 = "./pictures/LDSample2.jpeg"
     elif choice == "Sample Image 3":
-        file1 = "./pictures/LDSample3.png"
+        file1 = "./pictures/LDSample3.jpeg"
     # starting process once file is uploaded
     if file1 != None:
         img = Image.open(file1)

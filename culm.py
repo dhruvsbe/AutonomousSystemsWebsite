@@ -147,6 +147,12 @@ def imageod():
                 confi_list.append(int(confs[i]*100))
                 cv2.putText(img2,f'{classes[classIds[i]].upper()} {int(confs[i]*100)}%',
                           (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 1, (240, 0, 240), 2)
+            df= pd.DataFrame(list(zip(obj_list,confi_list)),columns=['Object Name','Confidence'])
+            if st.checkbox("Show List of Objects Detected" ):
+                st.write(df)
+            if st.checkbox("Show Bar Chart of Confidence Levels" ):
+                st.subheader('Confidence Levels of Objects Detected')
+                st.bar_chart(df["Confidence"])
            
         blob = cv2.dnn.blobFromImage(img2, 1 / 255, (whT, whT), [0, 0, 0], 1, crop=False)
         net.setInput(blob)
@@ -157,12 +163,6 @@ def imageod():
     
         st.image(img2, caption='Processed Image')
         
-        df= pd.DataFrame(list(zip(obj_list,confi_list)),columns=['Object Name','Confidence'])
-            if st.checkbox("Show List of Objects Detected" ):
-                st.write(df)
-            if st.checkbox("Show Bar Chart of Confidence Levels" ):
-                st.subheader('Confidence Levels of Objects Detected')
-                st.bar_chart(df["Confidence"])
 
 # Page 2
 def objectDetection(): 

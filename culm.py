@@ -157,7 +157,7 @@ def imageod():
     
         st.image(img2, caption='Processed Image.')
         
-        cv2.waitKey(0)
+        # cv2.waitKey(0)
         
         cv2.destroyAllWindows()
 

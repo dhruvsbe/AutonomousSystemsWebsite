@@ -179,7 +179,7 @@ def objectDetection():
     st.image(objectDetectionClassification, caption="Example of the YOLO Object Detection and Classification Algorithm", use_column_width=True)
     st.divider()
 
-    st.header("Replication of System:")
+    st.header("System Demo:")
     imageod()
 
 # Page 3
@@ -202,8 +202,17 @@ def trafficSignClassification():
     st.image(signClassification, caption="Example of a Traffic Sign Classification Algorithm", use_column_width=True)
     # section 2: system demo
     st.divider()
-    st.header("Replication of System:")
-    file1 = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
+    st.header("System Demo:")
+    choice  = st.selectbox("Select Image",("Sample Image 1","Sample Image 2","Sample Image 3","Upload an Image"))
+    if choice == "Upload an Image":
+        # image uploader
+        file1 = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
+    elif choice == "Sample Image 1":
+        file1 = "./pictures/OBSample1.jpeg"
+    elif choice == "Sample Image 2":
+        file1 = "./pictures/OBSample2.jpeg"
+    elif choice == "Sample Image 3":
+        file1 = "./pictures/OBSample3.jpeg"
     data = []
     if file1 != None:
         img = Image.open(file1)
@@ -331,7 +340,7 @@ def laneDetection():
     st.image(laneDetectionI, caption="3D Tesla Visualization of Lane Detection System", use_column_width=True)
     # section 2: system demo
     st.divider()
-    st.header("Replication of System:")
+    st.header("System Demo:")
     file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
     # starting process once file is uploaded
     if file != None:

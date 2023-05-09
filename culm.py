@@ -196,7 +196,7 @@ def trafficSignClassification():
     Nonetheless, these systems are not immune to errors and failures. Adverse weather conditions, 
     obstructed views, incorrect positioning of signs, or even intentional vandalism or sabotage may 
     result in misinterpretations, which could lead to catastrophic consequences if left unaddressed. 
-    Therefore, continuous monitoring of these system and addressing related issues must 
+    Therefore, continuous monitoring of these systems and addressing related issues must 
     remain integral parts of the development process to ensure their widespread safety. 
     """)
     st.image(signClassification, caption="Example of a Traffic Sign Classification Algorithm", use_column_width=True)

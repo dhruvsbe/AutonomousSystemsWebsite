@@ -323,10 +323,10 @@ def trafficSignClassification():
     # section 2: system demo
     st.divider()
     st.header("Replication of System:")
-    file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
+    file1 = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
     data = []
-    if file != None:
-        img = Image.open(file)
+    if file1 != None:
+        img = Image.open(file1)
         st.image(img, caption = "Inputted Image", use_column_width=True)
         image = img.resize((30,30))
         data.append(np.array(image))

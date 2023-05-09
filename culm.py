@@ -77,7 +77,7 @@ def home():
     roadways or respond to unpredictable situations. Deep learning and machine learning systems in autonomous 
     vehicles include computer vision algorithms for object recognition, natural language processing for human-machine 
     interaction, and reinforcement learning for decision-making and control. As we continue to develop and refine these technologies, it is crucial that 
-    we strike a balance between maximizing the safety and security of autonomous vehicles and upholding ethics. By doing so, we can harness the full potential of deep-learning and machine-learning 
+    industry leaders prioritize both safety and security. By doing so, we can harness the full potential of deep-learning and machine-learning 
     systems to create a future of transportation that is both safe and secure for all parties.
     """)  
 

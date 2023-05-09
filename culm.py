@@ -18,7 +18,7 @@ model = keras.models.load_model('./otherFiles/trafficSignClassifier.h5')
 
 # images used
 banner = Image.open("./pictures/websiteBanner.png")
-autopilotCameraPerception = Image.open("./pictures/AutopilotCameraFeed.webp")
+autopilotCameraPerception = Image.open("./pictures/AutopilotCameraFeed.png")
 ethicalIssue = Image.open("./pictures/ethicalIssue.png")
 objectDetectionClassification = Image.open("./pictures/objectDetection.png")
 signClassification = Image.open("./pictures/signClassification.png")

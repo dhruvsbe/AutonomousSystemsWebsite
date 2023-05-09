@@ -2,12 +2,9 @@
 import streamlit as st 
 from streamlit_option_menu import option_menu 
 import pandas as pd
-from PIL import Image, ImageTk 
+from PIL import Image
 import numpy as np
-import torch
 import cv2
-from ultralytics import YOLO
-import urllib
 import time
 from tensorflow import keras
 model = keras.models.load_model('./otherFiles/trafficSignClassifier.h5')

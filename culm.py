@@ -342,6 +342,7 @@ def laneDetection():
     st.divider()
     st.header("System Demo:")
     choice  = st.selectbox("Select Image",("Sample Image 1","Sample Image 2","Sample Image 3"))
+    st.divider()
     if choice == "Sample Image 1":
         file1 = "./pictures/LDSample1.jpeg"
     elif choice == "Sample Image 2":

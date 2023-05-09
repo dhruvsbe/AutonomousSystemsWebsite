@@ -208,11 +208,11 @@ def trafficSignClassification():
         # image uploader
         file1 = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
     elif choice == "Sample Image 1":
-        file1 = "./pictures/OBSample1.jpeg"
+        file1 = "./pictures/TDSample1.png"
     elif choice == "Sample Image 2":
-        file1 = "./pictures/OBSample2.jpeg"
+        file1 = "./pictures/TDSample2.png"
     elif choice == "Sample Image 3":
-        file1 = "./pictures/OBSample3.jpeg"
+        file1 = "./pictures/TDSample3.png"
     data = []
     if file1 != None:
         img = Image.open(file1)

@@ -345,7 +345,7 @@ def laneDetection():
     # starting process once file is uploaded
     if file != None:
         img = file
-        file = cv2.imread('/Users/dhruvbejugam/Desktop/AutonomousSystemsWebsite/laneDetection/' + file.name)
+        #file = cv2.imread('/Users/dhruvbejugam/Desktop/AutonomousSystemsWebsite/laneDetection/' + file.name)
         file = np.copy(file)
         # displaying original image
         st.divider()

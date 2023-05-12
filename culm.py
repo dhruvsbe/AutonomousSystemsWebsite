@@ -83,7 +83,7 @@ def home():
     
     st.divider()
     url = "https://docs.google.com/document/d/1JXdDKKQzY2R75W9tCphbmt0zMSY5iq6FMA4APXxxNa4/edit?usp=sharing"
-    st.write("[References](%s)" % url)
+    st.write("[Product References](%s)" % url)
 
 # function for object detection in images
 def imageod():

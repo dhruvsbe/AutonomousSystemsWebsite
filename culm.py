@@ -80,6 +80,10 @@ def home():
     industry leaders prioritize both safety and security. By doing so, we can harness the full potential of deep-learning and machine-learning 
     systems to create a future of transportation that is both safe and secure for all parties.
     """)  
+    
+    st.divider()
+    url = "https://docs.google.com/document/d/1JXdDKKQzY2R75W9tCphbmt0zMSY5iq6FMA4APXxxNa4/edit?usp=sharing"
+    st.write("[References](%s)" % url)
 
 # function for object detection in images
 def imageod():
